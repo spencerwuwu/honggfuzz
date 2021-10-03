@@ -69,7 +69,8 @@ struct {
     [SIGBUS].important = true,
     [SIGBUS].descr     = "SIGBUS",
 
-    [SIGABRT].important = true,
+    [SIGABRT].important = false,
+    //[SIGABRT].important = true,
     [SIGABRT].descr     = "SIGABRT",
 
     /* Is affected from tmout_vtalrm flag */

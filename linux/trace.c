@@ -232,8 +232,8 @@ struct user_regs_struct {
 #endif /* defined(__ANDROID__) */
 
 #if defined(__clang__)
-_Pragma("clang Diagnostic push\n");
-_Pragma("clang Diagnostic ignored \"-Woverride-init\"\n");
+_Pragma("clang diagnostic push\n");
+_Pragma("clang diagnostic ignored \"-Woverride-init\"");
 #endif
 
 static struct {
@@ -258,7 +258,8 @@ static struct {
     [SIGBUS].important = true,
     [SIGBUS].descr     = "SIGBUS",
 
-    [SIGABRT].important = true,
+    [SIGABRT].important = false,
+    //[SIGABRT].important = true,
     [SIGABRT].descr     = "SIGABRT",
 
     /* Is affected from tmoutVTALRM flag */
